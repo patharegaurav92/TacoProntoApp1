@@ -74,7 +74,7 @@ RadioButton large,medium,corn,flour;
 
         String phoneNo= "5627875766";
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + phoneNo));
-        intent.putExtra("sms_body",message+"\n Total price is "+price);
+        intent.putExtra("sms_body",message+"\nTotal price is "+price);
         startActivity(intent);
     }
 
@@ -107,15 +107,15 @@ RadioButton large,medium,corn,flour;
 
     private float calculateSizePrice() {
         float sum = 0;
-        if(isLarge){ sum+=2.5; message=message+" Large.";}
-        else { sum+=2; message=message+" Medium.";}
+        if(isLarge){ sum+=2.5; message=message+" Large";}
+        else { sum+=2; message=message+" Medium";}
         return sum;
 
     }
     private float calTortillaSize() {
         float sum = 0;
-        if(hasCorn){ sum+=2.5; message=message+" Corn.";}
-        else { sum+=2; message=message+" Flour.";}
+        if(hasCorn){ sum+=2.5; message=message+" Corn";}
+        else { sum+=2; message=message+" Flour";}
         return sum;
 
     }
